@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>board</display-name>
+	<welcome-file-list>
+		<welcome-file>login.do</welcome-file>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>ControllerAction</servlet-name>
+		<servlet-class>com.board.controller.ControllerAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+
+		<servlet-name>ControllerAction</servlet-name>
+
+		<url-pattern>*.do</url-pattern>
+
+	</servlet-mapping>
+	<jsp-config>
+	  <jsp-property-group>
+	  <url-pattern>/Problem/Answer.jsp</url-pattern>
+	  <url-pattern>/Problem/AnswerList.jsp</url-pattern>
+	  <url-pattern>/Problem/ProblemList.jsp</url-pattern>
+	  <url-pattern>/Problem/ProblemWrite.jsp</url-pattern>
+	  <url-pattern>/Problem/Show.jsp</url-pattern>
+	  <url-pattern>/index.jsp</url-pattern>
+	  <url-pattern>/UserJoin.jsp</url-pattern>
+	  <url-pattern>/LoginForm.jsp</url-pattern>
+	  <url-pattern>/LoginState.jsp</url-pattern>
+	  <url-pattern>/content.jsp</url-pattern>
+	  <url-pattern>/delete.jsp</url-pattern>
+	  <url-pattern>/list.jsp</url-pattern>
+	  <url-pattern>/listFile.jsp</url-pattern>
+	  <url-pattern>/listNotice.jsp</url-pattern>
+	  <url-pattern>/listQna.jsp</url-pattern>
+	  <url-pattern>/modify.jsp</url-pattern>
+	  <url-pattern>/modifyform.jsp</url-pattern>
+	  <url-pattern>/write.jsp</url-pattern>
+	  <url-pattern>/writeform.jsp</url-pattern>
+	  <url-pattern>/personalstudycontent_admin.jsp</url-pattern>
+	  <url-pattern>/personalstudycontent_member.jsp</url-pattern>
+	  <url-pattern>/personalstudycontent.jsp</url-pattern>
+	  <url-pattern>/personalstudydelete.jsp</url-pattern>
+	  <url-pattern>/personalstudyjoinlist.jsp</url-pattern>
+	  <url-pattern>/personalstudylist.jsp</url-pattern>
+	  <url-pattern>/personalstudymemberlist.jsp</url-pattern>
+	  <url-pattern>/personalstudymodify.jsp</url-pattern>
+	  <url-pattern>/personalstudymodifyform.jsp</url-pattern>
+	  <url-pattern>/personalstudysignup.jsp</url-pattern>
+	  <url-pattern>/personalstudywrite.jsp</url-pattern>
+	  <url-pattern>/personalstudywriteform.jsp</url-pattern>
+	  <include-prelude>/module/header.jsp</include-prelude>
+      <include-coda>/module/footer.jsp</include-coda>
+      </jsp-property-group>
+    </jsp-config>
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+
+</web-app>
